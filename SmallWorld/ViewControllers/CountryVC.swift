@@ -18,7 +18,9 @@ class CountryVC: UIViewController {
     @IBOutlet weak var region: UILabel!
     @IBOutlet weak var callingCodes: UILabel!
     
-    @IBOutlet weak var containerTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var stackViewTopConstraint: NSLayoutConstraint!
+    
     var selectedCountry: Country? {
         didSet {
             if self.isViewLoaded {
@@ -32,6 +34,8 @@ class CountryVC: UIViewController {
         
         handleWebView()
         spinner.hidesWhenStopped = true
+        stackView.alpha = 0
+        flagImage.alpha = 0
         if selectedCountry != nil {
             updateUI()
         }
@@ -48,7 +52,7 @@ class CountryVC: UIViewController {
     
     func updateUI() {
         if let name = selectedCountry?.name {
-            self.navigationItem.title = "\(name)'s Borders Countries"
+            self.navigationItem.title = name
         }
         capital.text = selectedCountry?.capital ?? ""
         region.text = selectedCountry?.region ?? ""
@@ -72,7 +76,7 @@ class CountryVC: UIViewController {
     }
 }
 
-//setting the image to fit the webview
+//setting the image to fit the webview and vice versa
 extension CountryVC: UIWebViewDelegate {
     public func webViewDidFinishLoad(_ webView: UIWebView) {
         let scaleFactor = webView.bounds.size.width / webView.scrollView.contentSize.width
@@ -89,9 +93,11 @@ extension CountryVC: UIWebViewDelegate {
         webView.scrollView.zoomScale = scaleFactor
         spinner.stopAnimating()
         
-        UIView.animate(withDuration: 1, animations: {
-            self.containerTopConstraint.constant -= gap
-            self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 1, animations: { [weak self] in
+            self?.flagImage.alpha = 1
+            self?.stackView.alpha = 1
+            self?.stackViewTopConstraint.constant -= gap
+            self?.view.layoutIfNeeded()
         })
     }
 }

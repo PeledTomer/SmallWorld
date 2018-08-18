@@ -8,7 +8,7 @@
 
 import Foundation
 
-//floats are more readable this way for the users
+//Floats are more readable this way for the common users
 //[No "e+06"]
 extension Float {
     var my_avoidNotation: String {
