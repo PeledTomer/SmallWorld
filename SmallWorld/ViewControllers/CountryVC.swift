@@ -80,14 +80,14 @@ extension CountryVC: UIWebViewDelegate {
             return
         }
         
+        let contentHeight = webView.scrollView.contentSize.height
+        let scaledContentHeight = contentHeight * scaleFactor
+        let gap = webView.bounds.size.height - scaledContentHeight
+        
         webView.scrollView.minimumZoomScale = scaleFactor
         webView.scrollView.maximumZoomScale = scaleFactor
         webView.scrollView.zoomScale = scaleFactor
         spinner.stopAnimating()
-        
-        let contentHeight = webView.scrollView.contentSize.height
-        let scaledContentHeight = contentHeight * scaleFactor
-        let gap = webView.bounds.size.height - scaledContentHeight
         
         UIView.animate(withDuration: 1, animations: {
             self.containerTopConstraint.constant -= gap
