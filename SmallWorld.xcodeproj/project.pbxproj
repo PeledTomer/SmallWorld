@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		D221427D2127428E00029F81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221427C2127428E00029F81 /* AppDelegate.swift */; };
-		D221427F2127428E00029F81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221427E2127428E00029F81 /* ViewController.swift */; };
+		D221427F2127428E00029F81 /* CountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221427E2127428E00029F81 /* CountryVC.swift */; };
 		D22142822127428E00029F81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22142802127428E00029F81 /* Main.storyboard */; };
 		D22142842127428F00029F81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D22142832127428F00029F81 /* Assets.xcassets */; };
 		D22142872127428F00029F81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22142852127428F00029F81 /* LaunchScreen.storyboard */; };
+		D221428F2127431300029F81 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221428E2127431300029F81 /* DataManager.swift */; };
+		D22142912127437400029F81 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22142902127437400029F81 /* Country.swift */; };
+		D221429321274AC700029F81 /* CountriesAllTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221429221274AC700029F81 /* CountriesAllTVC.swift */; };
+		D221429521274B0400029F81 /* CountriesBordersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221429421274B0400029F81 /* CountriesBordersTVC.swift */; };
+		D22142992127C28200029F81 /* Float+Visual.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22142982127C28200029F81 /* Float+Visual.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D22142792127428E00029F81 /* SmallWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmallWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D221427C2127428E00029F81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D221427E2127428E00029F81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D221427E2127428E00029F81 /* CountryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryVC.swift; sourceTree = "<group>"; };
 		D22142812127428E00029F81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D22142832127428F00029F81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D22142862127428F00029F81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D22142882127429000029F81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D221428E2127431300029F81 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		D22142902127437400029F81 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		D221429221274AC700029F81 /* CountriesAllTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesAllTVC.swift; sourceTree = "<group>"; };
+		D221429421274B0400029F81 /* CountriesBordersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesBordersTVC.swift; sourceTree = "<group>"; };
+		D22142982127C28200029F81 /* Float+Visual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Visual.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +65,42 @@
 			isa = PBXGroup;
 			children = (
 				D221427C2127428E00029F81 /* AppDelegate.swift */,
-				D221427E2127428E00029F81 /* ViewController.swift */,
+				D221429A2127C3EA00029F81 /* Extensions */,
+				D2214297212771C500029F81 /* Model */,
+				D2214296212771A000029F81 /* ViewControllers */,
 				D22142802127428E00029F81 /* Main.storyboard */,
 				D22142832127428F00029F81 /* Assets.xcassets */,
 				D22142852127428F00029F81 /* LaunchScreen.storyboard */,
 				D22142882127429000029F81 /* Info.plist */,
 			);
 			path = SmallWorld;
+			sourceTree = "<group>";
+		};
+		D2214296212771A000029F81 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D221429221274AC700029F81 /* CountriesAllTVC.swift */,
+				D221429421274B0400029F81 /* CountriesBordersTVC.swift */,
+				D221427E2127428E00029F81 /* CountryVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D2214297212771C500029F81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D221428E2127431300029F81 /* DataManager.swift */,
+				D22142902127437400029F81 /* Country.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D221429A2127C3EA00029F81 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D22142982127C28200029F81 /* Float+Visual.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D221427F2127428E00029F81 /* ViewController.swift in Sources */,
+				D22142912127437400029F81 /* Country.swift in Sources */,
+				D221429321274AC700029F81 /* CountriesAllTVC.swift in Sources */,
+				D221427F2127428E00029F81 /* CountryVC.swift in Sources */,
 				D221427D2127428E00029F81 /* AppDelegate.swift in Sources */,
+				D221429521274B0400029F81 /* CountriesBordersTVC.swift in Sources */,
+				D221428F2127431300029F81 /* DataManager.swift in Sources */,
+				D22142992127C28200029F81 /* Float+Visual.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +327,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V9XD4N95PQ;
 				INFOPLIST_FILE = SmallWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V9XD4N95PQ;
 				INFOPLIST_FILE = SmallWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
