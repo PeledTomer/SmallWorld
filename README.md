@@ -1,5 +1,9 @@
 # SmallWorld
 
+Code sample of working with json and svg files.
+
+
+
 swift home task
 
 Create app with 3 pages transitions.
