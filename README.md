@@ -4,40 +4,41 @@ Code sample of working with json and svg files.
 
 
 
-swift home task
-
-Create app with 3 pages transitions.
-
-Use this REST api : https://restcountries.eu/
-
-Screen 1 - present list of countries with this format :
-
-title - country name
-subtitle - native name
+swift home task:
 
 
-When one of the countries is selected move to screen 2.
+	Create app with 3 pages transitions.
 
-Screen 2 - present list of bordered countries with the same format:
+	Use this REST api : https://restcountries.eu/
 
-title - country name
-subtitle - native name
+	Screen 1 - present list of countries with this format :
+
+	title - country name
+	subtitle - native name
 
 
-When one of the bordered countries is selected move to screen 3.
+	When one of the countries is selected move to screen 2.
 
-Screen 3 - country description including :
+	Screen 2 - present list of bordered countries with the same format:
 
-Image of the country on the top of the country.
-Country name should present on the navigation bar.
-List of data information below the flag image view : 
-capital name
-region name
-population
-area
-calling codes
+	title - country name
+	subtitle - native name
 
-Scores will be given for:
-Design and implementation
-Being able running the application and check its functionality
-Clean code writing + detailed documentation
+
+	When one of the bordered countries is selected move to screen 3.
+
+	Screen 3 - country description including :
+
+	Image of the country on the top of the country.
+	Country name should present on the navigation bar.
+	List of data information below the flag image view : 
+	capital name
+	region name
+	population
+	area
+	calling codes
+
+	Scores will be given for:
+	Design and implementation
+	Being able running the application and check its functionality
+	Clean code writing + detailed documentation
