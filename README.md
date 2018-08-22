@@ -33,7 +33,7 @@ population
 area
 calling codes
 
-8.  Scores will be given for:
+Scores will be given for:
 Design and implementation
 Being able running the application and check its functionality
 Clean code writing + detailed documentation
